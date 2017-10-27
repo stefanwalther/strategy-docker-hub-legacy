@@ -1,6 +1,4 @@
 const dockerHubApi = require('docker-hub-api');
-const superagent = require('superagent');
-
 
 class RepositoriesBL {
 
@@ -14,7 +12,6 @@ class RepositoriesBL {
     let repos = await dockerHubApi.repositories(username);
     return repos;
   }
-
 
 }
 

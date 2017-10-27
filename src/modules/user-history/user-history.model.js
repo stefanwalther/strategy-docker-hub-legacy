@@ -7,19 +7,19 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
   docker_hub_username: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   namespace: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   name: {
-    type: String,
+    type: Schema.Types.String,
     required: true
   },
   profile: {
-    type: Object
+    type: Schema.Types.Object
   },
   last_sync_utc_ts: {
     type: Schema.Types.Date,
@@ -34,7 +34,7 @@ const schema = new Schema({
 schema.index({twitter_id: 1, screen_name: 1});
 schema.plugin(timeStamps, {createdAt: MongooseConfig.FIELD_CREATED, updatedAt: MongooseConfig.FIELD_UPDATED});
 
-const model = mongoose.model(MongooseConfig.COLLECTION_USER_HISTORY , schema);
+const model = mongoose.model(MongooseConfig.COLLECTION_USER_HISTORY, schema);
 
 module.exports = {
   Schema: schema,

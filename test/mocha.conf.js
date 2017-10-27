@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// process.env.NODE_ENV = 'test';
+// Process.env.NODE_ENV = 'test';
 // process.env.WINSTER_SUPRESS_LOGGING = '';
 
 // if (process.env.CIRCLECI !== 'true') {

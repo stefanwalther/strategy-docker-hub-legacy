@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const logger = require('winster').instance();
-const MongooseConnection = require('mongoose-connection-promise');
-const _ = require('lodash');
 const config = require('./config/config.js');
 
 class AppServer {
@@ -14,7 +12,6 @@ class AppServer {
     this.config = config;
 
     this._initApp();
-
   }
 
   _initApp() {
@@ -33,8 +30,6 @@ class AppServer {
       await this.server.close();
     }
   }
-
-
 }
 
 module.exports = AppServer;

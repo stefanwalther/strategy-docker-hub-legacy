@@ -7,19 +7,19 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
   docker_hub_username: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   namespace: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   name: {
-    type: String,
+    type: Schema.Types.String,
     required: true
   },
   profile: {
-    type: Object
+    type: Schema.Types.Object
   },
   last_sync_utc_ts: {
     type: Schema.Types.Date,

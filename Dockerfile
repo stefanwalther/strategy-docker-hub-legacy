@@ -1,2 +1,2 @@
-FROM node:8.5.0 as BASE
+FROM node:8.6.0 as BASE
 

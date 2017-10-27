@@ -4,7 +4,7 @@ describe('app-server.js', () => {
 
   let appServer = null;
 
-  beforeEach(async () =>  {
+  beforeEach(async () => {
     appServer = new AppServer();
     await appServer.start();
   });

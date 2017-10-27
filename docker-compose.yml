@@ -1,0 +1,29 @@
+version: '3'
+services:
+
+  mongodb:
+    image: "mongo:latest"
+    container_name: mongodb
+    environment:
+      - DOCKER_LABELS=true
+    ports:
+      - "27017:27017"
+    logging:
+      driver: none
+
+  rabbitmq:
+    image: sammlerio/rabbitmq
+    container_name: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    logging:
+      driver: none
+
+  strategy-docker-hub:
+    image: sammlerio/strategy-docker-hub
+    container_name: strategy-docker-hub
+    ports:
+      - "3002:3002"
+    logging:
+      driver: none

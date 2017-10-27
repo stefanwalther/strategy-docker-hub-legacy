@@ -4,17 +4,16 @@
 
 ---
 
-## Installation
+## About
 
-... install instructions here ...
+_strategy-docker-hub_ collects historical stats from Docker Hub per organization, user and repository.
 
-## Usage
+- Repositories per user/organization
+- Per repository
+  - Stars per day
+  - Pulls per day 
+  
 
-... usage instructions here ...
-
-## API
-
-See [API docs](./docs/api-docs.md)
 
 ## Contributing
 

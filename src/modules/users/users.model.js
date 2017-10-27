@@ -7,11 +7,11 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
   dh_id: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   username: {
-    type: string,
+    type: Schema.Types.String,
     required: true
   },
   profile: {
