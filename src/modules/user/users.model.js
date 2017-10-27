@@ -6,20 +6,17 @@ const Lib = require('./../../lib');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-  docker_hub_username: {
+  dh_id: {
     type: string,
     required: true
   },
-  namespace: {
+  username: {
     type: string,
-    required: true
-  },
-  name: {
-    type: String,
     required: true
   },
   profile: {
-    type: Object
+    type: Schema.Types.Object,
+    required: true
   },
   last_sync_utc_ts: {
     type: Schema.Types.Date,
@@ -27,14 +24,14 @@ const schema = new Schema({
     default: Lib.nowUtc()
   }
 }, {
-  collection: MongooseConfig.COLLECTION_PREFIX + MongooseConfig.COLLECTION_REPOSITORIES,
+  collection: MongooseConfig.COLLECTION_PREFIX + MongooseConfig.COLLECTION_USERS,
   strict: true
 });
 
-schema.index({twitter_id: 1, screen_name: 1});
+schema.index({dh_id: 1, username: 1});
 schema.plugin(timeStamps, {createdAt: MongooseConfig.FIELD_CREATED, updatedAt: MongooseConfig.FIELD_UPDATED});
 
-const model = mongoose.model(MongooseConfig.COLLECTION_REPOSITORIES, schema);
+const model = mongoose.model(MongooseConfig.COLLECTION_USERS, schema);
 
 module.exports = {
   Schema: schema,

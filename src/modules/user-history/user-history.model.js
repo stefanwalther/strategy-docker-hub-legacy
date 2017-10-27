@@ -27,14 +27,14 @@ const schema = new Schema({
     default: Lib.nowUtc()
   }
 }, {
-  collection: MongooseConfig.COLLECTION_PREFIX + MongooseConfig.COLLECTION_REPOSITORIES,
+  collection: MongooseConfig.COLLECTION_PREFIX + MongooseConfig.COLLECTION_USER_HISTORY,
   strict: true
 });
 
 schema.index({twitter_id: 1, screen_name: 1});
 schema.plugin(timeStamps, {createdAt: MongooseConfig.FIELD_CREATED, updatedAt: MongooseConfig.FIELD_UPDATED});
 
-const model = mongoose.model(MongooseConfig.COLLECTION_REPOSITORIES, schema);
+const model = mongoose.model(MongooseConfig.COLLECTION_USER_HISTORY , schema);
 
 module.exports = {
   Schema: schema,

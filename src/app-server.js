@@ -25,6 +25,7 @@ class AppServer {
 
   async start() {
     this.server = await this.app.listen(this.config.PORT);
+    this.logger.verbose(`Started server at port ${this.config.PORT}`);
   }
 
   async stop() {

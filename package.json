@@ -9,7 +9,13 @@
     "d-run": "docker run -it sammlerio/strategy-docker-hub",
     "dc-up:dev": "docker-compose --f=./docker-compose.dev.yml up",
     "dc-up:devb": "docker-compose --f=./docker-compose.dev.yml up --build",
-    "dc-down:dev": "docker-compose --f=./docker-compose.dev.yml down"
+    "dc-down:dev": "docker-compose --f=./docker-compose.dev.yml down",
+    "dc-up:deps": "docker-compose --f=./docker-compose.deps.yml up",
+    "dc-up:deps-b": "docker-compose --f=./docker-compose.deps.yml up --build",
+    "start:debug": "node --inspect index.js",
+    "start:dev": "nodemon index.js",
+    "start:watch": "(npm list nodemon -g || npm install nodemon -g) && nodemon -L --config ./nodemon.json --exec npm run start:debug"
+
   },
   "repository": {
     "type": "git",
@@ -34,6 +40,7 @@
     "express": "^4.15.4",
     "lodash": "^4.17.4",
     "mongoose-connection-promise": "^0.2.2",
+    "mongoose-timestamp": "^0.6.0",
     "superagent": "^3.8.0",
     "winster": "^0.2.7"
   },
