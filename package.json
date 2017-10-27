@@ -1,0 +1,49 @@
+{
+  "name": "strategy-docker-hub",
+  "version": "0.1.0",
+  "description": "Sammler.io strategy to fetch statistics from Docker Hub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "d-build": "docker build -t sammlerio/strategy-docker-hub .",
+    "d-run": "docker run -it sammlerio/strategy-docker-hub",
+    "dc-up:dev": "docker-compose --f=./docker-compose.dev.yml up",
+    "dc-up:devb": "docker-compose --f=./docker-compose.dev.yml up --build",
+    "dc-down:dev": "docker-compose --f=./docker-compose.dev.yml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammler/strategy-docker-hub.git"
+  },
+  "keywords": [
+    "sammler.io",
+    "sammler",
+    "statistics",
+    "docker-hub",
+    "docker"
+  ],
+  "author": "Stefan Walther <swr.nixda@gmail.com> (http://qliksite.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sammler/strategy-docker-hub/issues"
+  },
+  "homepage": "https://github.com/sammler/strategy-docker-hub#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "docker-hub-api": "^0.5.1",
+    "express": "^4.15.4",
+    "lodash": "^4.17.4",
+    "mongoose-connection-promise": "^0.2.2",
+    "superagent": "^3.8.0",
+    "winster": "^0.2.7"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.7.2",
+    "eslint-config-space-single": "^0.2.0",
+    "mocha": "^4.0.1",
+    "sinon": "^4.0.2",
+    "sinon-chai": "^2.14.0",
+    "supertest": "^3.0.0"
+  }
+}
