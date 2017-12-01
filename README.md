@@ -1,5 +1,7 @@
 # strategy-docker-hub
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sammler/strategy-docker-hub.svg)](https://greenkeeper.io/)
+
 > sammler.io strategy to fetch statistics from Docker Hub.
 
 ---
