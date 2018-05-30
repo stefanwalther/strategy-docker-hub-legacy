@@ -1,2 +1,2 @@
-FROM node:8.5.0@sha256:9f2febb132d813ff7873b6d7631092b2dcdf847b4dff349d79f7620b2768d1b4 as BASE
+FROM node:8.11.2@sha256:bba8a9c445fefc3e53fb2dfdfa755b0c119ae9f9999637e3b96ea37fae89d5d0 as BASE
 
