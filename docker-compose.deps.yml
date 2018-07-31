@@ -2,7 +2,7 @@ version: '2'
 services:
 
   mongodb:
-    image: "mongo:latest@sha256:7f860beef18c762747fe559296cc3125b99faf87bb18c92336d5e69c782b42ef"
+    image: "mongo:latest@sha256:fe8b55caf7bb855fd4e244450af5195f2243b766c6934d464128bf982b29b345"
     container_name: mongodb
     environment:
       - DOCKER_LABELS=true
