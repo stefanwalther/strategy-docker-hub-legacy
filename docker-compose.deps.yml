@@ -12,7 +12,7 @@ services:
       - 27017
 
   rabbitmq:
-    image: sammlerio/rabbitmq:latest@sha256:7a295c01e08647990a8037be06c8dbd21824e688cdd2f3c56ff0a12f7353bcbe
+    image: sammlerio/rabbitmq:latest@sha256:dca80a30a4d219dc30468db1260d4b3d8227be9b8995a7e81d2b43ae72b9a494
     container_name: rabbitmq
     ports:
       - "8080:15672"
