@@ -41,7 +41,7 @@
     "lodash": "^4.17.4",
     "mongoose-connection-promise": "^0.2.2",
     "mongoose-timestamp": "^0.6.0",
-    "superagent": "^3.8.0",
+    "superagent": "^5.0.0",
     "winster": "^0.2.7"
   },
   "devDependencies": {
